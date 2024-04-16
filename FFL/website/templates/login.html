@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIXICON ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+
+        <title>Fit For Life</title>
+    </head>
+    <body>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== LOGIN ====================-->
+            <section class="calculate section">
+                <div class="calculate__container container grid">
+                    <div class="calculate__content">
+                        <div class="section__titles">
+                            <h1 class="section__title-border">LOGIN</h1>
+                            <h1 class="section__title"></h1>
+                        </div>
+                        <p class="calculate__description">
+                            Login with your email and password:
+                        </p>
+                        <form method="POST" class="calculate__form">
+                            <div class="calculate__box">
+                                <input 
+                                    type="email" 
+                                    placeholder="Email" 
+                                    class="calculate__input" 
+                                    id="email"
+                                    name="email"
+                                />
+                                <label for="email" class="calculate__label"></label>
+                            </div>
+                            <div class="calculate__box">
+                                <input 
+                                    type="password" 
+                                    placeholder="Password" 
+                                    class="calculate__input" 
+                                    id="password"
+                                    name="password"
+                                />
+                                <label for="password" class="calculate__label"></label>
+                            </div>
+                            <button type="submit" class="button button__flex">
+                                Login <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </form>
+                        <p class="calculate__message" id="calculate-message"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src=""></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="{{ url_for('static', filename='scripts/main.js')}}"></script>
+    </body>
+</html>
